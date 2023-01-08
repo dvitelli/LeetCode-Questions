@@ -1,0 +1,22 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+
+        boolean isPalindrome = true;
+
+        String originalInt = String.valueOf(x);
+        char[] stringArray = originalInt.toCharArray();
+        char[] reverseArray = new char[stringArray.length];
+        for(int i = 0; i < stringArray.length; i++){
+            reverseArray[i] = stringArray[stringArray.length - 1 - i];
+        }
+
+        for(int i = 0; i < stringArray.length; i++){
+            if(stringArray[i] != reverseArray[i]){
+                isPalindrome = false;
+            }
+        }
+        
+        return isPalindrome;
+        
+    }
+}
