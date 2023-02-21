@@ -1,0 +1,29 @@
+class Solution {
+    public int removeElement(int[] nums, int val) {
+
+        int counter = 0;
+
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] != val){ //# doesnt equal val
+                counter++;
+            } else { //number equals val
+                for(int j = i; j < nums.length; j++){
+                    if(nums[j] != val){//if # != val then swap with the val
+                        int temp = nums[j];
+                        nums[j] = nums[i];
+                        nums[i] = temp;
+                        counter++;
+                        break;
+                        
+                        
+                    } //do nothing if there is no number to swap with
+
+                }
+            }
+
+        }
+        System.out.println(counter);
+        return counter;
+        
+    }
+}
