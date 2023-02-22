@@ -1,0 +1,20 @@
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+
+        int position = 0;
+        int temp;
+
+        if(target > nums[nums.length-1]){
+            return position = nums.length;
+        }else {
+            for(int i = 0; i < nums.length; i++){
+                if(target <= nums[i]){
+                    return position = i;
+                }
+
+            }
+        }
+
+        return position;
+    }
+}
