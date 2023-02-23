@@ -1,0 +1,14 @@
+public class Solution {
+    public int MySqrt(int x) {
+        
+        long i;
+
+        for(i = 0; i < x; i++){
+            if((x >= (i*i)) && (x <(i+1)*(i+1))){
+                return (int)i;
+            }
+        }
+
+        return (int)i;
+    }
+}
